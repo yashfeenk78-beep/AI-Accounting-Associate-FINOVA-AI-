@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finova AI — Your AI Accounting Associate</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="hero-card">
+    <canvas id="particles"></canvas>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="logo">
+        <span class="logo-icon">✦</span>
+        <span class="logo-text">Finova AI</span>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="#">Features <span class="chevron">▾</span></a></li>
+        <li><a href="#">How It Works</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">Resources</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="#" class="btn btn-ghost">Log In</a>
+        <a href="#" class="btn btn-primary">Get Started</a>
+      </div>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#">Features</a>
+      <a href="#">How It Works</a>
+      <a href="#">Pricing</a>
+      <a href="#">Resources</a>
+      <a href="#">About</a>
+      <a href="#" class="btn btn-ghost">Log In</a>
+      <a href="#" class="btn btn-primary">Get Started</a>
+    </div>
+
+    <!-- Main content -->
+    <main class="hero-main">
+      <div class="hero-left">
+        <div class="badge">
+          <span class="badge-dot">✦</span> AI-Powered Accounting
+        </div>
+
+        <h1 class="headline">
+          Your AI Accounting <br>
+          <span class="highlight">Associate</span>
+        </h1>
+
+        <p class="subtext">
+          Automate bookkeeping, reconcile accounts, and get real-time insights
+          with your AI accounting partner.
+        </p>
+
+        <div class="cta-row">
+          <a href="#" class="btn btn-cta">Get Started Free</a>
+        </div>
+      </div>
+
+      <div class="hero-right">
+
+        <!-- Total Revenue Card -->
+        <div class="card card-revenue">
+          <p class="card-label">Total Revenue</p>
+          <h2 class="card-value">$84,730</h2>
+          <p class="card-change positive">+12.5% from last month</p>
+          <svg id="revenueChart" class="revenue-chart" viewBox="0 0 700 220" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="revenueAreaFill" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#a855f7" stop-opacity="0.45"/>
+              <stop offset="100%" stop-color="#a855f7" stop-opacity="0"/>
+            </linearGradient>
+            <linearGradient id="revenueLineStroke" x1="0" y1="0" x2="700" y2="0">
+              <stop offset="0%" stop-color="#a855f7"/>
+              <stop offset="100%" stop-color="#3b82f6"/>
+            </linearGradient>
+          </defs>
+          <path class="revenue-area" d="M0,150 C30,140 55,120 85,128 C115,136 135,168 165,160 C195,152 215,115 245,108 C275,101 300,130 330,122 C360,114 385,75 415,68 C445,61 470,90 500,82 C530,74 550,45 580,32 C605,21 625,58 650,64 C665,68 680,26 700,8 L700,220 L0,220 Z" fill="url(#revenueAreaFill)"/>
+          <path class="revenue-line" d="M0,150 C30,140 55,120 85,128 C115,136 135,168 165,160 C195,152 215,115 245,108 C275,101 300,130 330,122 C360,114 385,75 415,68 C445,61 470,90 500,82 C530,74 550,45 580,32 C605,21 625,58 650,64 C665,68 680,26 700,8" fill="none" stroke="url(#revenueLineStroke)" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="700" cy="8" r="6" fill="#c084fc"/>
+          <circle cx="700" cy="8" r="11" fill="#c084fc" opacity="0.25"/>
+        </svg>
+          <div class="chart-months">
+            <span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span>
+          </div>
+        </div>
+
+        <div class="card-row">
+
+          <!-- Expenses Card -->
+          <div class="card card-small">
+            <p class="card-label">Expenses</p>
+            <h3 class="card-value-small">$32,450</h3>
+            <p class="card-sub">This month</p>
+            <svg id="expenseChart" class="mini-chart" viewBox="0 0 220 70" preserveAspectRatio="none">
+              <path class="expense-line" d="M0,58 C15,55 25,46 40,44 C55,42 65,52 80,47 C95,42 105,22 120,25 C135,28 145,17 160,14 C175,11 190,20 205,9 L220,4" fill="none" stroke="#a855f7" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+          </div>
+
+          <!-- Profit Card -->
+          <div class="card card-small card-profit">
+            <div class="profit-text">
+              <p class="card-label">Profit</p>
+              <h3 class="card-value-small">$52,280</h3>
+              <p class="card-change positive small">+8.4%</p>
+            </div>
+            <div class="donut-wrap">
+              <svg class="donut" viewBox="0 0 100 100">
+                <circle class="donut-track" cx="50" cy="50" r="40"></circle>
+                <circle class="donut-seg donut-seg-1" cx="50" cy="50" r="40"></circle>
+                <circle class="donut-seg donut-seg-2" cx="50" cy="50" r="40"></circle>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Stats bar -->
+    <footer class="stats-bar">
+      <div class="stat">
+        <h4>10K+</h4>
+        <p>Businesses</p>
+      </div>
+      <div class="stat">
+        <h4 class="stat-blue">99.9%</h4>
+        <p>Accuracy</p>
+      </div>
+      <div class="stat">
+        <h4 class="stat-blue">24/7</h4>
+        <p>AI Support</p>
+      </div>
+      <div class="stat">
+        <h4>150+</h4>
+        <p>Integrations</p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
